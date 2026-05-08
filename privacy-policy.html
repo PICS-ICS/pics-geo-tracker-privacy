@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Privacy Policy – PICS Geo Tracker</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg: #f7f6f2;
+      --surface: #ffffff;
+      --text: #1a1a18;
+      --muted: #5f5e5a;
+      --accent: #185fa5;
+      --accent-light: #e6f1fb;
+      --border: rgba(0,0,0,0.10);
+      --radius: 10px;
+    }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'Georgia', 'Times New Roman', serif;
+      font-size: 16px;
+      line-height: 1.8;
+    }
+
+    header {
+      background: var(--surface);
+      border-bottom: 1px solid var(--border);
+      padding: 2.5rem 0 2rem;
+      text-align: center;
+    }
+
+    .badge {
+      display: inline-block;
+      background: var(--accent-light);
+      color: var(--accent);
+      font-family: 'Arial', sans-serif;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      padding: 4px 14px;
+      border-radius: 20px;
+      margin-bottom: 1rem;
+    }
+
+    header h1 {
+      font-size: 2rem;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      color: var(--text);
+      margin-bottom: 0.4rem;
+    }
+
+    header p {
+      font-family: 'Arial', sans-serif;
+      font-size: 14px;
+      color: var(--muted);
+    }
+
+    .logo-row {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      margin-bottom: 1.2rem;
+    }
+
+    .logo-icon {
+      width: 44px;
+      height: 44px;
+      background: var(--accent);
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .logo-icon svg {
+      width: 24px;
+      height: 24px;
+      fill: none;
+      stroke: #fff;
+      stroke-width: 2;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
+    main {
+      max-width: 760px;
+      margin: 3rem auto;
+      padding: 0 1.5rem 4rem;
+    }
+
+    .toc {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1.5rem 2rem;
+      margin-bottom: 3rem;
+    }
+
+    .toc h2 {
+      font-family: 'Arial', sans-serif;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 1rem;
+    }
+
+    .toc ol {
+      padding-left: 1.2rem;
+    }
+
+    .toc li {
+      font-family: 'Arial', sans-serif;
+      font-size: 14px;
+      margin-bottom: 0.3rem;
+    }
+
+    .toc a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    .toc a:hover { text-decoration: underline; }
+
+    section {
+      margin-bottom: 2.8rem;
+    }
+
+    section h2 {
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: var(--text);
+      margin-bottom: 1rem;
+      padding-bottom: 0.5rem;
+      border-bottom: 1px solid var(--border);
+    }
+
+    section p {
+      margin-bottom: 1rem;
+      color: var(--text);
+    }
+
+    section ul, section ol {
+      padding-left: 1.4rem;
+      margin-bottom: 1rem;
+    }
+
+    section li {
+      margin-bottom: 0.4rem;
+    }
+
+    .highlight-box {
+      background: var(--accent-light);
+      border-left: 3px solid var(--accent);
+      border-radius: 0 var(--radius) var(--radius) 0;
+      padding: 1rem 1.25rem;
+      margin: 1.2rem 0;
+      font-family: 'Arial', sans-serif;
+      font-size: 15px;
+      color: #0c447c;
+    }
+
+    .data-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-family: 'Arial', sans-serif;
+      font-size: 14px;
+      margin: 1rem 0;
+    }
+
+    .data-table th {
+      background: #f1efe8;
+      text-align: left;
+      padding: 10px 14px;
+      font-weight: 700;
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: var(--muted);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .data-table td {
+      padding: 10px 14px;
+      border-bottom: 1px solid var(--border);
+      vertical-align: top;
+    }
+
+    .data-table tr:last-child td { border-bottom: none; }
+
+    footer {
+      text-align: center;
+      padding: 2rem 1rem;
+      background: var(--surface);
+      border-top: 1px solid var(--border);
+      font-family: 'Arial', sans-serif;
+      font-size: 13px;
+      color: var(--muted);
+    }
+
+    footer strong { color: var(--text); }
+
+    footer a { color: var(--accent); text-decoration: none; }
+
+    @media (max-width: 600px) {
+      header h1 { font-size: 1.5rem; }
+      main { margin-top: 2rem; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="logo-row">
+    <div class="logo-icon">
+      <svg viewBox="0 0 24 24">
+        <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
+        <circle cx="12" cy="9" r="2.5"/>
+      </svg>
+    </div>
+  </div>
+  <div class="badge">Privacy Policy</div>
+  <h1>PICS Geo Tracker</h1>
+  <p>Effective date: 8 May 2025 &nbsp;·&nbsp; Last updated: 8 May 2025</p>
+  <p style="margin-top:0.3rem;">Operated by <strong>LEMASPACE PTY LTD</strong> trading as <strong>ICS Flow / Inspired Change Solutions</strong></p>
+</header>
+
+<main>
+
+  <div class="toc">
+    <h2>Contents</h2>
+    <ol>
+      <li><a href="#overview">Overview</a></li>
+      <li><a href="#data-collected">Information We Collect</a></li>
+      <li><a href="#permissions">Device Permissions</a></li>
+      <li><a href="#how-we-use">How We Use Your Information</a></li>
+      <li><a href="#sharing">Sharing of Information</a></li>
+      <li><a href="#retention">Data Retention</a></li>
+      <li><a href="#security">Data Security</a></li>
+      <li><a href="#rights">Your Rights</a></li>
+      <li><a href="#children">Children's Privacy</a></li>
+      <li><a href="#changes">Changes to This Policy</a></li>
+      <li><a href="#contact">Contact Us</a></li>
+    </ol>
+  </div>
+
+  <section id="overview">
+    <h2>1. Overview</h2>
+    <p>
+      This Privacy Policy describes how <strong>LEMASPACE PTY LTD</strong>, trading as <strong>ICS Flow</strong> and <strong>Inspired Change Solutions</strong> ("we", "us", or "our"), collects, uses, and protects information when you use the <strong>PICS Geo Tracker</strong> mobile application ("the App").
+    </p>
+    <p>
+      PICS Geo Tracker is an employee and contractor management tool used exclusively by registered users of the PICS platform at <a href="https://pics.ics.co.za" target="_blank">pics.ics.co.za</a>. It verifies that field personnel are present at their designated job sites at the required times.
+    </p>
+    <div class="highlight-box">
+      By using this App, you agree to the collection and use of information as described in this policy. This App is intended for use only by authorised employees and contractors of organisations registered on the PICS platform.
+    </div>
+  </section>
+
+  <section id="data-collected">
+    <h2>2. Information We Collect</h2>
+    <p>We collect the following categories of information:</p>
+
+    <table class="data-table">
+      <thead>
+        <tr>
+          <th>Category</th>
+          <th>Examples</th>
+          <th>Purpose</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Account data</strong></td>
+          <td>Name, ID number, employer/contractor profile linked from pics.ics.co.za</td>
+          <td>User identification and access control</td>
+        </tr>
+        <tr>
+          <td><strong>Location data</strong></td>
+          <td>GPS coordinates, timestamp of check-in/check-out</td>
+          <td>Verify on-site attendance at assigned job sites</td>
+        </tr>
+        <tr>
+          <td><strong>Camera data</strong></td>
+          <td>Photos captured at check-in/check-out if required by your employer</td>
+          <td>Visual confirmation of on-site presence</td>
+        </tr>
+        <tr>
+          <td><strong>Device data</strong></td>
+          <td>Device model, OS version, app version</td>
+          <td>Technical support and app compatibility</td>
+        </tr>
+        <tr>
+          <td><strong>Usage logs</strong></td>
+          <td>Login times, check-in events, errors</td>
+          <td>Audit trail and troubleshooting</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <p>We do <strong>not</strong> collect payment information, call logs, contacts, messages, or browsing history.</p>
+  </section>
+
+  <section id="permissions">
+    <h2>3. Device Permissions</h2>
+    <p>The App requests the following permissions on your Android device:</p>
+    <ul>
+      <li>
+        <strong>Location (Precise / GPS):</strong> Required to determine whether you are physically present at your assigned job site. Location is captured only during active check-in/check-out events and is not tracked continuously in the background without your knowledge.
+      </li>
+      <li>
+        <strong>Camera:</strong> Used to capture a photo as visual confirmation of attendance, where required by your employer or job site configuration. Photos are not used for facial recognition.
+      </li>
+    </ul>
+    <p>You may deny or revoke these permissions in your device settings; however, doing so will prevent core features of the App from functioning.</p>
+  </section>
+
+  <section id="how-we-use">
+    <h2>4. How We Use Your Information</h2>
+    <p>We use the information collected solely for the following purposes:</p>
+    <ul>
+      <li>To verify that employees and contractors are present at their designated job sites at the correct times.</li>
+      <li>To generate attendance records accessible to your employer or contracting company via the PICS platform.</li>
+      <li>To maintain an audit trail for compliance, payroll, and safety purposes.</li>
+      <li>To improve app performance and fix technical issues.</li>
+      <li>To communicate important updates related to the App or your account.</li>
+    </ul>
+    <p>We do <strong>not</strong> use your data for advertising, profiling, or sale to third parties.</p>
+  </section>
+
+  <section id="sharing">
+    <h2>5. Sharing of Information</h2>
+    <p>Your information may be shared in the following limited circumstances:</p>
+    <ul>
+      <li>
+        <strong>Your employer / contracting company:</strong> Attendance records, location check-ins, and photos are made available to the organisation that manages your profile on pics.ics.co.za.
+      </li>
+      <li>
+        <strong>Service providers:</strong> We use trusted third-party providers (e.g. cloud hosting, analytics) who are bound by data processing agreements and may not use your data for their own purposes.
+      </li>
+      <li>
+        <strong>Legal requirements:</strong> We may disclose information where required by South African law, a court order, or a regulatory authority.
+      </li>
+    </ul>
+    <p>We do not sell, rent, or trade your personal information to any third party.</p>
+  </section>
+
+  <section id="retention">
+    <h2>6. Data Retention</h2>
+    <p>
+      Location check-in records, attendance logs, and associated photos are retained for a minimum of <strong>12 months</strong> from the date of capture, or for as long as required by your employer's contractual obligations and applicable South African labour and compliance law.
+    </p>
+    <p>
+      Account data is retained for as long as your profile remains active on the PICS platform. Upon account deactivation, personal data is deleted or anonymised within 90 days unless a longer retention period is required by law.
+    </p>
+  </section>
+
+  <section id="security">
+    <h2>7. Data Security</h2>
+    <p>
+      We implement appropriate technical and organisational measures to protect your personal information against unauthorised access, loss, destruction, or alteration. These include encrypted data transmission (HTTPS/TLS), access controls, and regular security reviews.
+    </p>
+    <p>
+      No method of electronic transmission or storage is 100% secure. While we strive to use commercially acceptable means to protect your data, we cannot guarantee absolute security.
+    </p>
+  </section>
+
+  <section id="rights">
+    <h2>8. Your Rights</h2>
+    <p>
+      Under the Protection of Personal Information Act (POPIA) of South Africa, you have the right to:
+    </p>
+    <ul>
+      <li>Request access to the personal information we hold about you.</li>
+      <li>Request correction of inaccurate or incomplete information.</li>
+      <li>Request deletion of your personal information, subject to legal and contractual obligations.</li>
+      <li>Object to the processing of your personal information in certain circumstances.</li>
+      <li>Lodge a complaint with the Information Regulator of South Africa.</li>
+    </ul>
+    <p>To exercise any of these rights, contact us at the details in Section 11.</p>
+  </section>
+
+  <section id="children">
+    <h2>9. Children's Privacy</h2>
+    <p>
+      PICS Geo Tracker is intended for use by adults (18 years and older) in a professional employment context. We do not knowingly collect personal information from individuals under the age of 18. If we become aware that a minor has provided personal information, we will delete it promptly.
+    </p>
+  </section>
+
+  <section id="changes">
+    <h2>10. Changes to This Policy</h2>
+    <p>
+      We may update this Privacy Policy from time to time. When we do, we will revise the "Last updated" date at the top of this page and, where appropriate, notify users via the App or email. We encourage you to review this policy periodically.
+    </p>
+    <p>
+      Continued use of the App after changes have been posted constitutes your acceptance of the revised policy.
+    </p>
+  </section>
+
+  <section id="contact">
+    <h2>11. Contact Us</h2>
+    <p>If you have any questions, concerns, or requests regarding this Privacy Policy or your personal information, please contact us:</p>
+    <div class="highlight-box">
+      <strong>LEMASPACE PTY LTD</strong><br/>
+      Trading as: Inspired Change Solutions / ICS Flow<br/>
+      Email: <a href="mailto:info@ics.co.za">info@ics.co.za</a><br/>
+      Website: <a href="https://pics.ics.co.za" target="_blank">pics.ics.co.za</a>
+    </div>
+    <p>We aim to respond to all privacy-related enquiries within <strong>10 business days</strong>.</p>
+  </section>
+
+</main>
+
+<footer>
+  <p>&copy; 2025 <strong>LEMASPACE PTY LTD</strong> · Inspired Change Solutions · ICS Flow</p>
+  <p style="margin-top:0.4rem;">This policy applies to the <strong>PICS Geo Tracker</strong> Android application.</p>
+  <p style="margin-top:0.4rem;"><a href="mailto:info@ics.co.za">info@ics.co.za</a> &nbsp;·&nbsp; <a href="https://pics.ics.co.za" target="_blank">pics.ics.co.za</a></p>
+</footer>
+
+</body>
+</html>

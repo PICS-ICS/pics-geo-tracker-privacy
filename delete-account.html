@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Delete Account – PICS Geo Tracker</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg: #f7f6f2;
+      --surface: #ffffff;
+      --text: #1a1a18;
+      --muted: #5f5e5a;
+      --accent: #185fa5;
+      --accent-light: #e6f1fb;
+      --accent-dark: #0c447c;
+      --danger: #a32d2d;
+      --danger-light: #fcebeb;
+      --warning: #854f0b;
+      --warning-light: #faeeda;
+      --border: rgba(0,0,0,0.10);
+      --radius: 10px;
+    }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'Georgia', 'Times New Roman', serif;
+      font-size: 16px;
+      line-height: 1.8;
+    }
+
+    header {
+      background: var(--surface);
+      border-bottom: 1px solid var(--border);
+      padding: 2.5rem 0 2rem;
+      text-align: center;
+    }
+
+    .badge {
+      display: inline-block;
+      background: var(--danger-light);
+      color: var(--danger);
+      font-family: 'Arial', sans-serif;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      padding: 4px 14px;
+      border-radius: 20px;
+      margin-bottom: 1rem;
+    }
+
+    .logo-row {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      margin-bottom: 1.2rem;
+    }
+
+    .logo-icon {
+      width: 44px;
+      height: 44px;
+      background: var(--accent);
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .logo-icon svg {
+      width: 24px;
+      height: 24px;
+      fill: none;
+      stroke: #fff;
+      stroke-width: 2;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
+    header h1 {
+      font-size: 2rem;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      color: var(--text);
+      margin-bottom: 0.4rem;
+    }
+
+    header p {
+      font-family: 'Arial', sans-serif;
+      font-size: 14px;
+      color: var(--muted);
+    }
+
+    main {
+      max-width: 760px;
+      margin: 3rem auto;
+      padding: 0 1.5rem 4rem;
+    }
+
+    .warning-box {
+      background: var(--warning-light);
+      border-left: 3px solid var(--warning);
+      border-radius: 0 var(--radius) var(--radius) 0;
+      padding: 1rem 1.25rem;
+      margin-bottom: 2.5rem;
+      font-family: 'Arial', sans-serif;
+      font-size: 15px;
+      color: var(--warning);
+    }
+
+    .warning-box strong { color: #633806; }
+
+    section {
+      margin-bottom: 2.8rem;
+    }
+
+    section h2 {
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: var(--text);
+      margin-bottom: 1rem;
+      padding-bottom: 0.5rem;
+      border-bottom: 1px solid var(--border);
+    }
+
+    section p {
+      margin-bottom: 1rem;
+    }
+
+    section ul, section ol {
+      padding-left: 1.4rem;
+      margin-bottom: 1rem;
+    }
+
+    section li {
+      margin-bottom: 0.5rem;
+    }
+
+    /* Step cards */
+    .steps {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      margin: 1.2rem 0;
+    }
+
+    .step {
+      display: flex;
+      gap: 1rem;
+      align-items: flex-start;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1rem 1.25rem;
+    }
+
+    .step-num {
+      flex-shrink: 0;
+      width: 32px;
+      height: 32px;
+      background: var(--accent);
+      color: #fff;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Arial', sans-serif;
+      font-weight: 700;
+      font-size: 14px;
+      margin-top: 2px;
+    }
+
+    .step-body {
+      flex: 1;
+    }
+
+    .step-body strong {
+      display: block;
+      font-family: 'Arial', sans-serif;
+      font-size: 15px;
+      font-weight: 700;
+      margin-bottom: 0.2rem;
+      color: var(--text);
+    }
+
+    .step-body p {
+      font-family: 'Arial', sans-serif;
+      font-size: 14px;
+      color: var(--muted);
+      margin: 0;
+      line-height: 1.6;
+    }
+
+    /* Email CTA */
+    .email-cta {
+      background: var(--accent-light);
+      border: 1px solid #b5d4f4;
+      border-radius: var(--radius);
+      padding: 1.5rem 1.75rem;
+      margin: 1.5rem 0;
+      text-align: center;
+    }
+
+    .email-cta p {
+      font-family: 'Arial', sans-serif;
+      font-size: 14px;
+      color: var(--accent-dark);
+      margin-bottom: 0.8rem;
+    }
+
+    .email-cta a.btn {
+      display: inline-block;
+      background: var(--accent);
+      color: #fff;
+      font-family: 'Arial', sans-serif;
+      font-size: 15px;
+      font-weight: 700;
+      text-decoration: none;
+      padding: 0.65rem 1.75rem;
+      border-radius: 6px;
+      letter-spacing: 0.01em;
+    }
+
+    .email-cta a.btn:hover { background: var(--accent-dark); }
+
+    .email-cta .email-addr {
+      display: block;
+      margin-top: 0.75rem;
+      font-family: 'Arial', sans-serif;
+      font-size: 13px;
+      color: var(--accent-dark);
+    }
+
+    /* Data table */
+    .data-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-family: 'Arial', sans-serif;
+      font-size: 14px;
+      margin: 1rem 0;
+    }
+
+    .data-table th {
+      background: #f1efe8;
+      text-align: left;
+      padding: 10px 14px;
+      font-weight: 700;
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: var(--muted);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .data-table td {
+      padding: 10px 14px;
+      border-bottom: 1px solid var(--border);
+      vertical-align: top;
+      line-height: 1.5;
+    }
+
+    .data-table tr:last-child td { border-bottom: none; }
+
+    .pill {
+      display: inline-block;
+      font-size: 11px;
+      font-weight: 700;
+      padding: 2px 10px;
+      border-radius: 20px;
+      font-family: 'Arial', sans-serif;
+    }
+
+    .pill-deleted {
+      background: var(--danger-light);
+      color: var(--danger);
+    }
+
+    .pill-kept {
+      background: var(--warning-light);
+      color: var(--warning);
+    }
+
+    .highlight-box {
+      background: var(--accent-light);
+      border-left: 3px solid var(--accent);
+      border-radius: 0 var(--radius) var(--radius) 0;
+      padding: 1rem 1.25rem;
+      margin: 1.2rem 0;
+      font-family: 'Arial', sans-serif;
+      font-size: 15px;
+      color: var(--accent-dark);
+    }
+
+    footer {
+      text-align: center;
+      padding: 2rem 1rem;
+      background: var(--surface);
+      border-top: 1px solid var(--border);
+      font-family: 'Arial', sans-serif;
+      font-size: 13px;
+      color: var(--muted);
+    }
+
+    footer strong { color: var(--text); }
+    footer a { color: var(--accent); text-decoration: none; }
+
+    @media (max-width: 600px) {
+      header h1 { font-size: 1.5rem; }
+      main { margin-top: 2rem; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="logo-row">
+    <div class="logo-icon">
+      <svg viewBox="0 0 24 24">
+        <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
+        <circle cx="12" cy="9" r="2.5"/>
+      </svg>
+    </div>
+  </div>
+  <div class="badge">Account Deletion</div>
+  <h1>PICS Geo Tracker</h1>
+  <p>Request deletion of your account and personal data</p>
+  <p style="margin-top:0.3rem;">Operated by <strong>LEMASPACE PTY LTD</strong> trading as <strong>ICS Flow / Inspired Change Solutions</strong></p>
+</header>
+
+<main>
+
+  <div class="warning-box">
+    <strong>⚠ This action is permanent.</strong> Deleting your account will permanently remove your profile and associated data from PICS Geo Tracker. This cannot be undone.
+  </div>
+
+  <section id="how-to-request">
+    <h2>How to request account deletion</h2>
+    <p>
+      To delete your PICS Geo Tracker account and all associated personal data, send a deletion request by email. Follow the steps below:
+    </p>
+
+    <div class="steps">
+      <div class="step">
+        <div class="step-num">1</div>
+        <div class="step-body">
+          <strong>Compose an email to us</strong>
+          <p>Send your request to <strong>info@ics.co.za</strong> using the email address linked to your PICS account.</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num">2</div>
+        <div class="step-body">
+          <strong>Use the subject line: "Account Deletion Request – PICS Geo Tracker"</strong>
+          <p>This ensures your request is routed correctly and processed without delay.</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num">3</div>
+        <div class="step-body">
+          <strong>Include your details in the email body</strong>
+          <p>Provide your full name, ID number or employee/contractor number, and the name of your employer or contracting company as registered on the PICS platform.</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num">4</div>
+        <div class="step-body">
+          <strong>We will confirm and process your request</strong>
+          <p>You will receive a confirmation email within 2 business days. Your account and data will be permanently deleted within <strong>5 business days</strong> of your request being verified.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="email-cta">
+      <p>Ready to submit your request? Tap the button below to open a pre-addressed email.</p>
+      <a class="btn" href="mailto:info@ics.co.za?subject=Account%20Deletion%20Request%20%E2%80%93%20PICS%20Geo%20Tracker&body=Full%20name%3A%0AEmployee%2FContractor%20number%3A%0AEmployer%20%2F%20company%20name%3A%0A%0APlease%20delete%20my%20PICS%20Geo%20Tracker%20account%20and%20all%20associated%20personal%20data.">
+        Send deletion request
+      </a>
+      <span class="email-addr">info@ics.co.za</span>
+    </div>
+  </section>
+
+  <section id="what-is-deleted">
+    <h2>What data is deleted and what is kept</h2>
+    <p>
+      Upon successful verification of your deletion request, the following action is taken on all data associated with your account:
+    </p>
+
+    <table class="data-table">
+      <thead>
+        <tr>
+          <th>Data type</th>
+          <th>Action</th>
+          <th>Details</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Profile information (name, ID, contact details)</td>
+          <td><span class="pill pill-deleted">Permanently deleted</span></td>
+          <td>Removed within 5 business days of verified request</td>
+        </tr>
+        <tr>
+          <td>GPS location check-in / check-out records</td>
+          <td><span class="pill pill-deleted">Permanently deleted</span></td>
+          <td>All location history is purged from our systems</td>
+        </tr>
+        <tr>
+          <td>Attendance photos</td>
+          <td><span class="pill pill-deleted">Permanently deleted</span></td>
+          <td>All photos captured during check-ins are deleted</td>
+        </tr>
+        <tr>
+          <td>Login and usage logs</td>
+          <td><span class="pill pill-deleted">Permanently deleted</span></td>
+          <td>App session and event logs are removed</td>
+        </tr>
+        <tr>
+          <td>Device information</td>
+          <td><span class="pill pill-deleted">Permanently deleted</span></td>
+          <td>Device model and OS records are removed</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="highlight-box">
+      All personal data associated with your PICS Geo Tracker account is permanently deleted within <strong>5 business days</strong>. No personal data is retained after this period.
+    </div>
+  </section>
+
+  <section id="important-notes">
+    <h2>Important notes</h2>
+    <ul>
+      <li>Deleting your account from PICS Geo Tracker does <strong>not</strong> automatically remove your profile from the main PICS platform at <a href="https://pics.ics.co.za" target="_blank">pics.ics.co.za</a>. Contact your employer or administrator to manage your platform profile separately.</li>
+      <li>Once your data is deleted it <strong>cannot be recovered</strong>. Please ensure you no longer require access before submitting a request.</li>
+      <li>If your employer requires you to use the App as part of your employment contract, please discuss your request with your employer before submitting.</li>
+      <li>We may ask you to verify your identity before processing your request to protect against unauthorised deletion.</li>
+    </ul>
+  </section>
+
+  <section id="contact">
+    <h2>Questions?</h2>
+    <p>If you have any questions about the deletion process or your personal data, contact us:</p>
+    <div class="highlight-box">
+      <strong>LEMASPACE PTY LTD</strong><br/>
+      Trading as: Inspired Change Solutions / ICS Flow<br/>
+      Email: <a href="mailto:info@ics.co.za">info@ics.co.za</a><br/>
+      Website: <a href="https://pics.ics.co.za" target="_blank">pics.ics.co.za</a>
+    </div>
+    <p>For our full privacy policy, visit <a href="index.html">pics-ics.github.io/pics-geo-tracker-privacy/</a>.</p>
+  </section>
+
+</main>
+
+<footer>
+  <p>&copy; 2025 <strong>LEMASPACE PTY LTD</strong> · Inspired Change Solutions · ICS Flow</p>
+  <p style="margin-top:0.4rem;">This page applies to the <strong>PICS Geo Tracker</strong> Android application.</p>
+  <p style="margin-top:0.4rem;"><a href="mailto:info@ics.co.za">info@ics.co.za</a> &nbsp;·&nbsp; <a href="https://pics.ics.co.za" target="_blank">pics.ics.co.za</a></p>
+</footer>
+
+</body>
+</html>

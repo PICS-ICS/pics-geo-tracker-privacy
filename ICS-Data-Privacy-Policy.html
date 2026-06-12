@@ -220,13 +220,24 @@
 
 <header>
   <div class="logo-row">
-    <div class="logo-icon">
-      <svg viewBox="0 0 24 24">
-        <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
-        <circle cx="12" cy="9" r="2.5"/>
-      </svg>
-    </div>
+  <div class="logo-icon">
+    <svg viewBox="0 0 24 24">
+      <!-- Left node -->
+      <circle cx="4" cy="12" r="2" stroke="#fff" stroke-width="1.8" fill="none"/>
+      <!-- Center node -->
+      <circle cx="12" cy="6" r="2" stroke="#fff" stroke-width="1.8" fill="none"/>
+      <!-- Right node -->
+      <circle cx="20" cy="12" r="2" stroke="#fff" stroke-width="1.8" fill="none"/>
+      <!-- Bottom node -->
+      <circle cx="12" cy="18" r="2" stroke="#fff" stroke-width="1.8" fill="none"/>
+      <!-- Connecting lines -->
+      <line x1="6" y1="12" x2="10" y2="7.2" stroke="#fff" stroke-width="1.8" stroke-linecap="round"/>
+      <line x1="14" y1="7.2" x2="18" y2="11" stroke="#fff" stroke-width="1.8" stroke-linecap="round"/>
+      <line x1="6" y1="12.8" x2="10" y2="16.8" stroke="#fff" stroke-width="1.8" stroke-linecap="round"/>
+      <line x1="14" y1="16.8" x2="18" y2="13" stroke="#fff" stroke-width="1.8" stroke-linecap="round"/>
+    </svg>
   </div>
+</div>
   <div class="badge">Privacy Policy</div>
   <h1>ICS Flow</h1>
   <p>Last updated: 12 June 2026</p>
@@ -294,10 +305,6 @@
         <tr>
           <td><strong>Voluntarily provided</strong></td>
           <td>Any information you submit through forms, enquiries, or direct communications</td>
-        </tr>
-        <tr>
-          <td><strong>Technical information</strong></td>
-          <td>IP address, browser type and version, device information</td>
         </tr>
         <tr>
           <td><strong>Usage and analytics</strong></td>

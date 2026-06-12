@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Privacy Policy – ICS Flow</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg: #f7f6f2;
+      --surface: #ffffff;
+      --text: #1a1a18;
+      --muted: #5f5e5a;
+      --accent: #185fa5;
+      --accent-light: #e6f1fb;
+      --border: rgba(0,0,0,0.10);
+      --radius: 10px;
+    }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'Georgia', 'Times New Roman', serif;
+      font-size: 16px;
+      line-height: 1.8;
+    }
+
+    header {
+      background: var(--surface);
+      border-bottom: 1px solid var(--border);
+      padding: 2.5rem 0 2rem;
+      text-align: center;
+    }
+
+    .badge {
+      display: inline-block;
+      background: var(--accent-light);
+      color: var(--accent);
+      font-family: 'Arial', sans-serif;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      padding: 4px 14px;
+      border-radius: 20px;
+      margin-bottom: 1rem;
+    }
+
+    header h1 {
+      font-size: 2rem;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      color: var(--text);
+      margin-bottom: 0.4rem;
+    }
+
+    header p {
+      font-family: 'Arial', sans-serif;
+      font-size: 14px;
+      color: var(--muted);
+    }
+
+    .logo-row {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      margin-bottom: 1.2rem;
+    }
+
+    .logo-icon {
+      width: 44px;
+      height: 44px;
+      background: var(--accent);
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .logo-icon svg {
+      width: 24px;
+      height: 24px;
+      fill: none;
+      stroke: #fff;
+      stroke-width: 2;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
+    main {
+      max-width: 760px;
+      margin: 3rem auto;
+      padding: 0 1.5rem 4rem;
+    }
+
+    .toc {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1.5rem 2rem;
+      margin-bottom: 3rem;
+    }
+
+    .toc h2 {
+      font-family: 'Arial', sans-serif;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 1rem;
+    }
+
+    .toc ol {
+      padding-left: 1.2rem;
+    }
+
+    .toc li {
+      font-family: 'Arial', sans-serif;
+      font-size: 14px;
+      margin-bottom: 0.3rem;
+    }
+
+    .toc a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    .toc a:hover { text-decoration: underline; }
+
+    section {
+      margin-bottom: 2.8rem;
+    }
+
+    section h2 {
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: var(--text);
+      margin-bottom: 1rem;
+      padding-bottom: 0.5rem;
+      border-bottom: 1px solid var(--border);
+    }
+
+    section p {
+      margin-bottom: 1rem;
+      color: var(--text);
+    }
+
+    section ul, section ol {
+      padding-left: 1.4rem;
+      margin-bottom: 1rem;
+    }
+
+    section li {
+      margin-bottom: 0.4rem;
+    }
+
+    .highlight-box {
+      background: var(--accent-light);
+      border-left: 3px solid var(--accent);
+      border-radius: 0 var(--radius) var(--radius) 0;
+      padding: 1rem 1.25rem;
+      margin: 1.2rem 0;
+      font-family: 'Arial', sans-serif;
+      font-size: 15px;
+      color: #0c447c;
+    }
+
+    .data-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-family: 'Arial', sans-serif;
+      font-size: 14px;
+      margin: 1rem 0;
+    }
+
+    .data-table th {
+      background: #f1efe8;
+      text-align: left;
+      padding: 10px 14px;
+      font-weight: 700;
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: var(--muted);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .data-table td {
+      padding: 10px 14px;
+      border-bottom: 1px solid var(--border);
+      vertical-align: top;
+    }
+
+    .data-table tr:last-child td { border-bottom: none; }
+
+    footer {
+      text-align: center;
+      padding: 2rem 1rem;
+      background: var(--surface);
+      border-top: 1px solid var(--border);
+      font-family: 'Arial', sans-serif;
+      font-size: 13px;
+      color: var(--muted);
+    }
+
+    footer strong { color: var(--text); }
+
+    footer a { color: var(--accent); text-decoration: none; }
+
+    @media (max-width: 600px) {
+      header h1 { font-size: 1.5rem; }
+      main { margin-top: 2rem; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="logo-row">
+    <div class="logo-icon">
+      <svg viewBox="0 0 24 24">
+        <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
+        <circle cx="12" cy="9" r="2.5"/>
+      </svg>
+    </div>
+  </div>
+  <div class="badge">Privacy Policy</div>
+  <h1>ICS Flow</h1>
+  <p>Last updated: 12 June 2026</p>
+  <p style="margin-top:0.3rem;">Website: <a href="https://icsflow.com" target="_blank" style="color:var(--accent);text-decoration:none;">icsflow.com</a></p>
+</header>
+
+<main>
+
+  <div class="toc">
+    <h2>Contents</h2>
+    <ol>
+      <li><a href="#overview">Overview</a></li>
+      <li><a href="#who-we-are">Who We Are</a></li>
+      <li><a href="#data-collected">Information We Collect</a></li>
+      <li><a href="#linkedin">Information Collected Through LinkedIn</a></li>
+      <li><a href="#how-we-use">How We Use Your Information</a></li>
+      <li><a href="#legal-basis">Legal Basis for Processing</a></li>
+      <li><a href="#sharing">Sharing of Information</a></li>
+      <li><a href="#retention">Data Retention</a></li>
+      <li><a href="#security">Data Security</a></li>
+      <li><a href="#rights">Your Rights</a></li>
+      <li><a href="#cookies">Cookies and Analytics</a></li>
+      <li><a href="#third-party">Third-Party Services</a></li>
+      <li><a href="#contact">Contact Us</a></li>
+      <li><a href="#changes">Updates to This Policy</a></li>
+    </ol>
+  </div>
+
+  <section id="overview">
+    <h2>1. Overview</h2>
+    <p>
+      ICS Flow ("ICS Flow", "we", "our", or "us") respects your privacy and is committed to protecting your personal information in accordance with the <strong>Protection of Personal Information Act (POPIA)</strong> of South Africa.
+    </p>
+    <p>
+      This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website, interact with our LinkedIn advertisements, or submit information through LinkedIn Lead Gen Forms.
+    </p>
+    <div class="highlight-box">
+      By using our website or submitting information through our forms or LinkedIn Lead Gen Forms, you agree to the collection and use of information as described in this policy.
+    </div>
+  </section>
+
+  <section id="who-we-are">
+    <h2>2. Who We Are</h2>
+    <p>
+      ICS Flow operates the website at <a href="https://icsflow.com" target="_blank">https://icsflow.com</a> and may interact with you through LinkedIn advertising and lead generation forms. For any privacy-related enquiries, please refer to the contact details in Section 13.
+    </p>
+  </section>
+
+  <section id="data-collected">
+    <h2>3. Information We Collect</h2>
+    <p>We may collect the following categories of personal and technical information:</p>
+
+    <table class="data-table">
+      <thead>
+        <tr>
+          <th>Category</th>
+          <th>Examples</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Personal information</strong></td>
+          <td>Full name, email address, phone number, company name, job title, industry information</td>
+        </tr>
+        <tr>
+          <td><strong>Voluntarily provided</strong></td>
+          <td>Any information you submit through forms, enquiries, or direct communications</td>
+        </tr>
+        <tr>
+          <td><strong>Technical information</strong></td>
+          <td>IP address, browser type and version, device information</td>
+        </tr>
+        <tr>
+          <td><strong>Usage and analytics</strong></td>
+          <td>Website usage patterns and analytics data</td>
+        </tr>
+        <tr>
+          <td><strong>Cookie data</strong></td>
+          <td>Cookie identifiers and tracking information</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section id="linkedin">
+    <h2>4. Information Collected Through LinkedIn</h2>
+    <p>
+      When you submit a LinkedIn Lead Gen Form, LinkedIn may provide us with information including your name, email address, phone number, company details, job title, and any other information you choose to share.
+    </p>
+    <div class="highlight-box">
+      This information is collected with your consent and provided to us by LinkedIn for the purpose described in the advertisement or lead form.
+    </div>
+  </section>
+
+  <section id="how-we-use">
+    <h2>5. How We Use Your Information</h2>
+    <p>We may use your personal information to:</p>
+    <ul>
+      <li>Contact you regarding products and services offered by ICS Flow.</li>
+      <li>Respond to enquiries and requests.</li>
+      <li>Schedule demonstrations, consultations, or meetings.</li>
+      <li>Provide marketing communications that may be relevant to you.</li>
+      <li>Improve our products, services, and website experience.</li>
+      <li>Maintain business records and comply with legal obligations.</li>
+    </ul>
+  </section>
+
+  <section id="legal-basis">
+    <h2>6. Legal Basis for Processing</h2>
+    <p>We process personal information based on:</p>
+    <ul>
+      <li><strong>Your consent</strong> — where you have provided explicit consent for a specific purpose.</li>
+      <li><strong>Legitimate business interests</strong> — where processing is necessary for our reasonable business purposes.</li>
+      <li><strong>Contractual obligations</strong> — where processing is required to fulfil a contract or pre-contractual steps.</li>
+      <li><strong>Compliance with applicable laws and regulations</strong> — including POPIA and other relevant South African legislation.</li>
+    </ul>
+  </section>
+
+  <section id="sharing">
+    <h2>7. Sharing of Information</h2>
+    <p>We do <strong>not</strong> sell your personal information.</p>
+    <p>We may share information with trusted third-party service providers who assist us with:</p>
+    <ul>
+      <li>Customer relationship management (CRM) systems.</li>
+      <li>Marketing and advertising services.</li>
+      <li>Analytics and reporting tools.</li>
+      <li>Website hosting and technology services.</li>
+    </ul>
+    <p>These providers are required to protect your information and use it only for authorised purposes.</p>
+  </section>
+
+  <section id="retention">
+    <h2>8. Data Retention</h2>
+    <p>
+      We retain personal information only for as long as necessary to fulfil the purposes outlined in this Privacy Policy, or to comply with legal and regulatory requirements. When personal information is no longer required, it is securely deleted or anonymised.
+    </p>
+  </section>
+
+  <section id="security">
+    <h2>9. Data Security</h2>
+    <p>
+      ICS Flow implements reasonable technical and organisational measures to protect personal information against unauthorised access, loss, misuse, disclosure, alteration, or destruction.
+    </p>
+    <p>
+      While we strive to protect your information, no method of electronic transmission or storage is completely secure. We cannot guarantee absolute security, but we are committed to maintaining commercially acceptable standards of data protection.
+    </p>
+  </section>
+
+  <section id="rights">
+    <h2>10. Your Rights</h2>
+    <p>
+      Under the Protection of Personal Information Act (POPIA) of South Africa, you may have the right to:
+    </p>
+    <ul>
+      <li>Request access to your personal information.</li>
+      <li>Request correction of inaccurate or incomplete information.</li>
+      <li>Request deletion of your personal information.</li>
+      <li>Object to certain processing activities.</li>
+      <li>Withdraw consent for marketing communications at any time.</li>
+    </ul>
+    <p>To exercise any of these rights, please contact us using the details in Section 13.</p>
+  </section>
+
+  <section id="cookies">
+    <h2>11. Cookies and Analytics</h2>
+    <p>Our website may use cookies and similar technologies to:</p>
+    <ul>
+      <li>Improve website functionality.</li>
+      <li>Analyse website performance.</li>
+      <li>Measure advertising effectiveness.</li>
+      <li>Enhance user experience.</li>
+    </ul>
+    <p>You may control cookie settings through your browser preferences at any time.</p>
+  </section>
+
+  <section id="third-party">
+    <h2>12. Third-Party Services</h2>
+    <p>
+      Our website and marketing activities may utilise third-party services, including LinkedIn. We encourage you to review LinkedIn's Privacy Policy to understand how your data is handled on their platform:
+    </p>
+    <div class="highlight-box">
+      LinkedIn Privacy Policy: <a href="https://www.linkedin.com/legal/privacy-policy" target="_blank">https://www.linkedin.com/legal/privacy-policy</a>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>13. Contact Us</h2>
+    <p>If you have any questions regarding this Privacy Policy or how your personal information is handled, please contact us:</p>
+    <div class="highlight-box">
+      <strong>ICS Flow</strong><br/>
+      Website: <a href="https://icsflow.com" target="_blank">https://icsflow.com</a><br/>
+      Email: <a href="mailto:info@icsflow.com">info@icsflow.com</a>
+    </div>
+  </section>
+
+  <section id="changes">
+    <h2>14. Updates to This Policy</h2>
+    <p>
+      We may update this Privacy Policy from time to time. Any changes will be posted on this page with an updated revision date at the top. We encourage you to review this policy periodically to stay informed of how we protect your information.
+    </p>
+    <p>
+      Continued use of our website or services after changes have been posted constitutes your acceptance of the revised policy.
+    </p>
+  </section>
+
+</main>
+
+<footer>
+  <p>&copy; 2026 <strong>ICS Flow</strong></p>
+  <p style="margin-top:0.4rem;"><a href="mailto:info@icsflow.com">info@icsflow.com</a> &nbsp;·&nbsp; <a href="https://icsflow.com" target="_blank">icsflow.com</a></p>
+</footer>
+
+</body>
+</html>
